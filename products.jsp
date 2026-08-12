@@ -19,4 +19,11 @@
         </c:forEach>
     </table>
 </body>
-</html>
+</html><td>${product.stock}</td>
+<td>
+    <form method="post" action="${pageContext.request.contextPath}/cart" style="display:inline;">
+        <input type="hidden" name="productId" value="${product.id}"/>
+        <input type="number" name="quantity" value="1" min="1" style="width:50px;"/>
+        <button type="submit">Add to Cart</button>
+    </form>
+</td>
